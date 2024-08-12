@@ -808,7 +808,7 @@ bool ClicEfficiencyCalculator::isReconstructable(MCParticle*& particle, std::str
     bool passNHits = false;
 
     // Cut on stable particles
-    if(particle->getGeneratorStatus() != 1) isStable = true;
+    if(particle->getGeneratorStatus() == 1) isStable = true;
     
     // Only make tracks with 6 or more hits
     std::vector<TrackerHit*> trackHits = particleHits[particle];
